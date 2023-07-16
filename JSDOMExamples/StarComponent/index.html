@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star rating</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Star Component</h2>
+        <div class="star-container">
+            <div class="star" data-pos="1">&#9733</div>
+            <div class="star" data-pos="2">&#9733</div>
+            <div class="star" data-pos="3">&#9733</div>
+            <div class="star" data-pos="4">&#9733</div>
+            <div class="star" data-pos="5">&#9733</div>
+        </div>
+        
+        <h3>Rating</h3>
+    </div>
+    
+    <script>
+        let starCont=document.querySelector(".star-container");
+        let prevClicked=0;
+        let allStars=document.querySelectorAll(".star");
+        let rating=document.querySelector("h3");
+        starCont.addEventListener("click",function(e){
+
+            let currentStar=e.target.dataset.pos;
+            for(let i=0;i<prevClicked;i++){
+                allStars[i].classList.remove("gold");
+            }
+            for(let i=0;i<currentStar;i++){
+                allStars[i].classList.add("gold");
+            }
+            if(currentStar==1){
+                rating.innerText="Very Bad";
+            }
+            else if(currentStar==2){
+                rating.innerText="Bad";
+            }
+            else if(currentStar==3){
+                rating.innerText="Ok";
+            }
+            else if(currentStar==4){
+                rating.innerText="Good";
+            }
+            else if(currentStar==5){
+                rating.innerText="Very Good";
+            }
+          //  rating.innerText="Rating:"+currentStar;
+            prevClicked=currentStar;
+        })
+
+        starCont.addEventListener("mouseover",function(e){
+            let currentStar=e.target.dataset.pos;
+            for(let i=0;i<allStars.length;i++){
+                if(allStars[i].classList.contains("gold")){
+                    allStars[i].classList.remove("gold");
+                }
+                
+            }
+            for(let i=0;i<currentStar;i++){
+                allStars[i].classList.add("gold");
+            }
+           // prevClicked=currentStar;
+        })
+        starCont.addEventListener("mouseleave",function(e){
+            for(let i=0;i<allStars.length;i++){
+                allStars[i].classList.remove("gold");
+            }
+            for(let i=0;i<prevClicked;i++){
+                allStars[i].classList.add("gold");
+            }
+        })
+    </script>
+</body>
+</html>

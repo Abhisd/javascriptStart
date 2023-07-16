@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>I am in H1</h1>
+  <h1 id="h11">I am another h1 tag</h1>
+  <p>I am in p tag</p>
+  <div>
+    <p class="child1">I am child of div</p>
+    <p id="child2">I am another child of div</p>
+  </div>
+</body>
+<script>
+    //read
+    // console.log("Read operartion using query selector");
+    // console.log("Query Selector");
+    // let h1Data=document.querySelector("h1");
+    // console.log(h1Data);
+    // console.log(h1Data.innerText);
+    // console.log("Query Selector All")
+    // let h1AllData=document.querySelectorAll("h1");
+    // console.log(h1AllData[0]);
+    // console.log(h1AllData[1]);
+    // let p1=document.querySelector(".child1");
+    // console.log(p1);
+    // let p2=document.querySelector("#child2");
+    // console.log(p2);
+    // //another approach to select
+
+    // let p11=document.getElementsByClassName("child1");
+    // console.log(p11);
+    // let p22=document.getElementById("child2");
+    // console.log(p22);
+
+    //create
+    let h2=document.createElement("h2");
+    console.log(h2);
+    h2.innerText="I am heading 2 from DOM";
+    let body=document.querySelector("body");
+    body.appendChild(h2);
+    
+    //update
+    let h1Element=document.querySelector("h1");
+    h1Element.innerText="I am updating H1";
+
+    //delete
+    let h11=document.querySelector("#h11");
+    h11.remove();
+</script>
+</html>

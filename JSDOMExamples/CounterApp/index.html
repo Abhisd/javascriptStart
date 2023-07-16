@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 70vw;
+            margin: auto;
+            border: 2px solid grey;
+        }
+        h1{
+            text-align: center;
+            color: blueviolet;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: cadetblue;
+        }
+        label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           margin: auto;
+           color:blueviolet;
+            
+        }
+        .incr-decr {
+            justify-content: center;
+            display: flex;   
+              
+        }
+        .incr ,.decr ,.reset{
+            background-color: aquamarine;
+            margin: 5px;
+            height: 50px;
+            width: 70px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .reset{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h2>0</h2>
+        <label>
+            <span>Increment/Decrement by :</span>
+            <input type="number" min="0">
+        </label>
+        <div class="incr-decr">
+            <button class="incr">Add</button>
+            <button class="decr">Subtract</button>
+        </div>
+        <button class="reset">Reset</button>
+    </div>
+    <script >
+        let add=document.querySelector(".incr");
+        let counterValue=document.querySelector("h2");
+        let incrDecrBy=1;
+        let subtract=document.querySelector(".decr");
+        let inputNum=document.querySelector("input");
+        inputNum.addEventListener("change",function(){
+            let num=inputNum.value;
+            if(num==""){
+                incrDecrBy=1;
+                return;
+            }
+            
+            incrDecrBy=parseInt(num);
+            if(incrDecrBy<=0){
+                incrDecrBy=1;
+                alert("Please enter positive number");
+                return ;
+            }
+        })
+        add.addEventListener("click",function(){
+            let value=parseInt(counterValue.innerText);
+            value=value+incrDecrBy;
+            counterValue.innerText=value;
+        })
+        subtract.addEventListener("click",function(){
+            let value=parseInt(counterValue.innerText);
+            value=value-incrDecrBy;
+            counterValue.innerText=value;
+        })
+
+       let resetBtn=document.querySelector(".reset");
+
+       resetBtn.addEventListener("click",function(){
+        counterValue.innerText="0";
+        inputNum.value=0;
+        incrDecrBy=1;
+       })
+    </script>
+</body>
+</html>
