@@ -8,11 +8,12 @@ import { Counter } from './Components/Counter';
 import UserGreetings from './Components/UserGreetings';
 import Product from './Components/Product.';
 import Form from './Components/Form';
+import UseEffectHook from './Components/UseEffectHook';
 
 function App() {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     {/* <Counter/>
     <UserProfile name="Abhi" age="25" Occupation="Developer"/>
     <UserProfile name="Ram" age="45" Occupation="Developer"/>
@@ -21,8 +22,9 @@ function App() {
     <UserGreetings/>
     <MyComponent/> */}
     {/* <Product/> */}
-     <Form/>
-    <Footer />
+     {/* <Form/> */}
+     <UseEffectHook/>
+    {/* <Footer /> */}
     
     </>
     
