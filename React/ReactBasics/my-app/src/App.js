@@ -9,6 +9,7 @@ import UserGreetings from './Components/UserGreetings';
 import Product from './Components/Product.';
 import Form from './Components/Form';
 import UseEffectHook from './Components/UseEffectHook';
+import Examples from './Components/Examples';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
     <MyComponent/> */}
     {/* <Product/> */}
      {/* <Form/> */}
-     <UseEffectHook/>
+     {/* <UseEffectHook/> */}
+     <Examples/>
     {/* <Footer /> */}
     
     </>
