@@ -15,8 +15,8 @@ function App() {
   return (
     <>
     {/* <Header /> */}
-    {/* <Counter/>
-    <UserProfile name="Abhi" age="25" Occupation="Developer"/>
+     <Counter/>
+    {/*<UserProfile name="Abhi" age="25" Occupation="Developer"/>
     <UserProfile name="Ram" age="45" Occupation="Developer"/>
     <UserProfile name="MSD" age="42" Occupation="GOAT"/>
     <UserProfile name="Dn" age="25" Occupation="Dongiri"/>
@@ -26,7 +26,7 @@ function App() {
      {/* <Form/> */}
      {/* <UseEffectHook/> */}
      <Examples/>
-    {/* <Footer /> */}
+     <Footer /> 
     
     </>
     
