@@ -219,3 +219,158 @@ section .banner{
     color: var(--pink);
     text-decoration: none;
 }
+.courses{
+    /* background-color: var(--white); */
+}
+.courses h2{
+    font-weight: 200;
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 4rem 0;
+    line-height: 1.5;
+}
+.courses .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.courses .course-container{
+    margin: 2rem;
+    background-color:var(--white);
+    height: 35rem;
+    width: 25rem;
+}
+
+.course-heading{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15%;
+    
+}
+.course-heading h3{
+    font-weight: 100;
+    color: var(--white);
+}
+.course-heading img{
+    height: 40px;
+    width: 40px;
+}
+.sd{
+    background-color: var(--bgLight);
+}
+.ml{
+    background-color: var(--voilet);
+}
+.master{
+    background-color: var(--brown);
+}
+.course-detail{
+    padding: 2rem;
+    height: 65%;
+    overflow: auto;
+}
+.course-detail .yoe{
+    display: flex;
+    align-items: center;
+}
+.course-detail .yoe p{
+    margin-left: 1rem;
+    color: grey;
+}
+.course-detail h4{
+    margin-top: 1rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+.course-detail p{
+    color: grey;
+}
+
+.course-bottom div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.course-bottom{
+    margin-top: 1rem;
+}
+.course-bottom>img{
+    margin: 0 2rem;
+    
+}
+.course-bottom span{
+    color: grey;
+    line-height: 1.25;
+}
+.course-bottom div p{
+    color: var(--bgLight);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.course-bottom div img{
+    cursor: pointer;
+}
+/* .course-bottom div img:hover{
+    height: 40px;
+    width: 40px;
+    transition-duration: 500ms;
+} */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5rem;
+    background-color: var(--footerBg);
+}
+
+footer h4{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 2.5;
+}
+
+footer p{
+    color: var(--white);
+}
+
+footer a{
+    color: var(--footerText);
+    text-decoration: none;
+    line-height: 1.25;
+}
+
+footer>div{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .first .logo{
+    width: 80px;
+    height: 50px;
+}
+footer .first .interviewbit{
+    width: 180px;
+    height: 30px;
+    margin: 1rem 0;
+}
+
+footer .first div div{
+    display: inline-block;
+    margin-right:5px ;
+}
+footer .first div div img{
+    width: 120px;
+}
+footer .first div>img{
+    width: 80px;
+    margin: 1rem 0;
+}
